@@ -46,9 +46,9 @@ def CopyDirContent(src, dest):
 for task in HL2SDK.libs:
   if task.target.platform == 'linux':
     if task.target.arch == 'x86_64':
-      builder.AddCopy(task.binary, folder_map['linux64'])
+      builder.AddCopy(task.binary, folder_map['public/linux64'])
     else:
-      builder.AddCopy(task.binary, folder_map['linux'])
+      builder.AddCopy(task.binary, folder_map['public/linux'])
   elif task.target.platform == 'windows':
     if task.target.arch == 'x86_64':
       builder.AddCopy(task.binary, folder_map['public/win64'])
